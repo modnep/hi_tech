@@ -22,6 +22,12 @@ public class CalculatorForJob {
                 return;
             }
 
+            if (a < 1 || a > 10 || b < 1 || b > 10) {
+                System.out.println("Ошибка: числа должны быть в диапазоне от 1 до 10 включительно.");
+                scanner.close();
+                return;
+            }
+
             switch (parts[1]) {
                 case "+":
                     result = a + b;
@@ -33,10 +39,6 @@ public class CalculatorForJob {
                     result = a * b;
                     break;
                 case "/":
-                    if (b == 0) {
-                        System.out.println("Ошибка: деление на 0");
-                        return;
-                    }
                     result = a / b;
                     break;
                 default:
