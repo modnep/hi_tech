@@ -1,3 +1,4 @@
+package Megaquest;
 import java.util.Scanner;
 
 public class CalculatorForJob {
@@ -11,9 +12,7 @@ public class CalculatorForJob {
                 System.out.println("throws Exception");  //т.к. строка не является математической операцией
                 return;
             }
-
             int a, b, result;
-
             try {
                 a = Integer.parseInt(parts[0]);
                 b = Integer.parseInt(parts[2]);
